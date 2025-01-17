@@ -4,16 +4,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unit Conversion Program</title>
     <style>
-        body {
+body    {
             font-family: Arial, sans-serif;
             margin: 20px;
-            background-color: #f0f8ff; /* Soft light blue */
+            background-color: #333333; /* Dark gray background */
+            color: #ffffff; /* White text */
         }
 
 h1      {
             text-align: center;
             color: #fff;
-            background-color: #5a9bd4; /* Softer blue shade */
+            background-color: #4f7bb0; /* Softer but richer blue shade */
             padding: 10px;
             border-radius: 8px;
         }
@@ -21,11 +22,11 @@ h1      {
 .container {
             max-width: 600px;
             margin: 0 auto;
-            background-color: #ffffff; /* White background for the container */
+            background-color: #444444; /* Slightly lighter gray for the container */
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-           }
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
 
 select, input[type="number"] 
         {
@@ -33,28 +34,31 @@ select, input[type="number"]
             padding: 10px;
             margin: 10px 0;
             border-radius: 4px;
-            border: 1px solid #ddd; /* Lighter border color */
+            border: 1px solid #777; /* Medium gray border for inputs */
+            background-color: #555555; /* Darker background for inputs */
+            color: #fff; /* White text in input fields */
         }
 
-button {
+button  {
             width: 100%;
             padding: 10px;
-            background-color: #6fa3d4; /* Soft blue */
+            background-color: #5d8fbb; /* Richer blue for button */
             color: white;
             border: none;
             border-radius: 4px;
             cursor: pointer;
         }
 
-button:hover {
-               background-color: #5a8bb7; /* Slightly darker blue */
-             }
+button:hover 
+        {
+            background-color: #4f7bb0; /* Darker blue on hover */
+        }
 
 #result {
             text-align: center;
             margin-top: 20px;
             font-size: 1.2em;
-            color: #333; /* Dark text for contrast */
+            color: #ffffff; /* White result text */
         }
 
 #savedConversions 
@@ -70,7 +74,7 @@ button:hover {
 
 #savedConversions li 
         {
-            background-color: #f9f9f9; /* Soft light gray for saved conversions */
+            background-color: #555555; /* Darker gray for saved conversions */
             margin-bottom: 5px;
             padding: 10px;
             border-radius: 4px;

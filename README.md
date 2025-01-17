@@ -5,16 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unit Conversion Program</title>
     <style>
-        body {
+        body 
+        {
             font-family: Arial, sans-serif;
             margin: 20px;
             background-color: #f4f4f9;
         }
 
-h1 {
-            text-align: center;
-            color: #333;
-        }
+h1    {
+        text-align: center;
+        color: #333;
+      }
+
+.logo {
+        display: block;
+        margin: 0 auto 20px auto;
+        width: 150px;
+      }
 
 .container {
             max-width: 600px;
@@ -23,9 +30,10 @@ h1 {
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
+           }
 
-select, input[type="number"] {
+select, input[type="number"] 
+        {
             width: 100%;
             padding: 10px;
             margin: 10px 0;
@@ -33,7 +41,7 @@ select, input[type="number"] {
             border: 1px solid #ccc;
         }
 
- button {
+button {
             width: 100%;
             padding: 10px;
             background-color: #4CAF50;
@@ -43,52 +51,56 @@ select, input[type="number"] {
             cursor: pointer;
         }
 
- button:hover {
-            background-color: #45a049;
-        }
+button:hover {
+               background-color: #45a049;
+             }
 
-  #result {
+ #result {
             text-align: center;
             margin-top: 20px;
             font-size: 1.2em;
             color: #333;
-        }
+         }
 
- #savedConversions {
-            margin-top: 20px;
-        }
+#savedConversions {
+                    margin-top: 20px;
+                  }
 
- #savedConversions ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
+#savedConversions ul {
+                       list-style-type: none;
+                       padding-left: 0;
+                    }
 
-  #savedConversions li {
-          background-color: #f1f1f1;
-            margin-bottom: 5px;
-            padding: 10px;
-            border-radius: 4px;
-        }
-    </style>
+#savedConversions li {
+                       background-color: #f1f1f1;
+                       margin-bottom: 5px;
+                       padding: 10px;
+                       border-radius: 4px;
+                    }
+</style>
 </head>
 <body>
-  <h1>Unit Conversion Program</h1>
 
-   <div class="container">
-        <h2>Conversion</h2>
+<h1>Unit Conversion Program</h1>
+<!-- UTeM Logo -->
+<img class="logo" src="images/utem-logo.png" alt="UTeM Logo">
 
-   <label for="conversionType">Choose conversion type:</label>
+<div class="container">
+<h2>Conversion</h2>
+
+<label for="conversionType">Choose conversion type:</label>
         <select id="conversionType">
             <option value="length">Length</option>
             <option value="mass">Mass</option>
             <option value="temperature">Temperature</option>
         </select>
 
-  <label for="value">Enter value:</label>
+<label for="value">Enter value:</label>
         <input type="number" id="value" placeholder="Enter value to convert" />
-    <label for="fromUnit">From unit:</label>
+
+<label for="fromUnit">From unit:</label>
         <select id="fromUnit"></select>
-        
+
 <label for="toUnit">To unit:</label>
         <select id="toUnit"></select>
 
@@ -108,7 +120,8 @@ select, input[type="number"] {
         const temperatureUnits = ['Celsius', 'Fahrenheit', 'Kelvin'];
 
         let savedConversions = [];
-// Populate unit options based on conversion type
+
+        // Populate unit options based on conversion type
         document.getElementById('conversionType').addEventListener('change', updateUnitOptions);
         updateUnitOptions(); // Initial population
 
@@ -140,7 +153,7 @@ select, input[type="number"] {
             });
         }
 
-// Perform the conversion based on user input
+        // Perform the conversion based on user input
         function performConversion() {
             const value = parseFloat(document.getElementById('value').value);
             const fromUnit = document.getElementById('fromUnit').value;

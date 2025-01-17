@@ -217,7 +217,8 @@ button:hover {
             const list = document.getElementById('conversionList');
             list.innerHTML = ''; // Clear the list
 
-            savedConversions.forEach(conversion => {
+            savedConversions.forEach(conversion => 
+            {
                 const li = document.createElement('li');
                 li.textContent = conversion;
                 list.appendChild(li);

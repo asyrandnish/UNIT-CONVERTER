@@ -14,7 +14,7 @@ body    {
 h1      {
             text-align: center;
             color: #fff;
-            background-color: #2c3e50; /* Darker blue-gray shade */
+            background-color: #D81B60; /* Bold Pink for the header */
             padding: 10px;
             border-radius: 8px;
         }
@@ -42,7 +42,7 @@ select, input[type="number"]
 button  {
             width: 100%;
             padding: 10px;
-            background-color: #F06292; /* Soft Pink button */
+            background-color: #D81B60; /* Darker pink on hover */
             color: white;
             border: none;
             border-radius: 4px;
@@ -51,7 +51,7 @@ button  {
 
 button:hover 
         {
-            background-color: #D81B60; /* Darker pink on hover */
+            background-color: #F06292; /* Soft Pink button */
         }
 
 #result {
@@ -74,7 +74,7 @@ button:hover
 
 #savedConversions li 
         {
-            background-color: #f1f1f1; /* Light gray background for saved conversions */
+            background-color: #333333; /* Dark gray for saved conversions */
             margin-bottom: 5px;
             padding: 10px;
             border-radius: 4px;

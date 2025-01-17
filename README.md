@@ -14,7 +14,7 @@ body    {
 h1      {
             text-align: center;
             color: #fff;
-            background-color: #D81B60; /* Bold Pink for the header */
+            background-color: #2c3e50; /* Darker blue-gray shade */
             padding: 10px;
             border-radius: 8px;
         }

@@ -12,25 +12,23 @@
             background-color: #f4f4f9;
         }
 
-h1    {
-        text-align: center;
-        color: #333;
-      }
+h1      {
+            text-align: center;
+            color: white;
+            background-color: blue;
+            padding: 10px;
+            border-radius: 8px;
+        }
 
-.logo {
-        display: block;
-        margin: 0 auto 20px auto;
-        width: 150px;
-      }
-
-.container {
+.container 
+        {
             max-width: 600px;
             margin: 0 auto;
             background-color: white;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-           }
+        }
 
 select, input[type="number"] 
         {
@@ -44,46 +42,48 @@ select, input[type="number"]
 button {
             width: 100%;
             padding: 10px;
-            background-color: #4CAF50;
+            background-color: blue;
             color: white;
             border: none;
             border-radius: 4px;
             cursor: pointer;
         }
 
-button:hover {
-               background-color: #45a049;
-             }
+button:hover 
+        {
+            background-color: #0056b3;
+        }
 
- #result {
+#result {
             text-align: center;
             margin-top: 20px;
             font-size: 1.2em;
             color: #333;
-         }
+        }
 
-#savedConversions {
-                    margin-top: 20px;
-                  }
+#savedConversions 
+        {
+            margin-top: 20px;
+        }
 
-#savedConversions ul {
-                       list-style-type: none;
-                       padding-left: 0;
-                    }
+#savedConversions ul 
+        {
+            list-style-type: none;
+            padding-left: 0;
+        }
 
-#savedConversions li {
-                       background-color: #f1f1f1;
-                       margin-bottom: 5px;
-                       padding: 10px;
-                       border-radius: 4px;
-                    }
+#savedConversions li 
+        {
+            background-color: #f1f1f1;
+            margin-bottom: 5px;
+            padding: 10px;
+            border-radius: 4px;
+        }
 </style>
 </head>
 <body>
 
 <h1>Unit Conversion Program</h1>
-<!-- UTeM Logo -->
-<img class="logo" src="images/utem-logo.png" alt="UTeM Logo">
 
 <div class="container">
 <h2>Conversion</h2>
@@ -115,7 +115,7 @@ button:hover {
     </div>
 
 <script>
-        const lengthUnits = ['m', 'km', 'cm', 'mm'];
+        const lengthUnits = ['km', 'm', 'cm'];
         const massUnits = ['kg', 'g', 'mg'];
         const temperatureUnits = ['Celsius', 'Fahrenheit', 'Kelvin'];
 
@@ -187,10 +187,8 @@ button:hover {
         function convertLength(value, from, to) {
             if (from === 'm' && to === 'km') return value / 1000;
             if (from === 'm' && to === 'cm') return value * 100;
-            if (from === 'm' && to === 'mm') return value * 1000;
             if (from === 'km' && to === 'm') return value * 1000;
             if (from === 'cm' && to === 'm') return value / 100;
-            if (from === 'mm' && to === 'm') return value / 1000;
             return value;
         }
 
@@ -217,8 +215,7 @@ button:hover {
             const list = document.getElementById('conversionList');
             list.innerHTML = ''; // Clear the list
 
-            savedConversions.forEach(conversion => 
-            {
+            savedConversions.forEach(conversion => {
                 const li = document.createElement('li');
                 li.textContent = conversion;
                 list.appendChild(li);

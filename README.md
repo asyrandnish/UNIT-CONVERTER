@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -185,9 +184,11 @@ button:hover
 
         // Conversion functions
         function convertLength(value, from, to) {
-            if (from === 'm' && to === 'km') return value / 1000;
-            if (from === 'm' && to === 'cm') return value * 100;
             if (from === 'km' && to === 'm') return value * 1000;
+            if (from === 'm' && to === 'km') return value / 1000;
+            if (from === 'km' && to === 'cm') return value * 100000;
+            if (from === 'cm' && to === 'km') return value / 100000;
+            if (from === 'm' && to === 'cm') return value * 100;
             if (from === 'cm' && to === 'm') return value / 100;
             return value;
         }
@@ -197,6 +198,8 @@ button:hover
             if (from === 'g' && to === 'kg') return value / 1000;
             if (from === 'kg' && to === 'mg') return value * 1000000;
             if (from === 'mg' && to === 'kg') return value / 1000000;
+            if (from === 'g' && to === 'mg') return value * 1000;
+            if (from === 'mg' && to === 'g') return value / 1000;
             return value;
         }
 

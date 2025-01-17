@@ -2,18 +2,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unit Conversion Program</title>
+    <title>ENGINEERING UNIT CONVERTER</title>
     <style>
 body    {
             font-family: Arial, sans-serif;
             margin: 20px;
             background-color: #F8BBD0; /* Soft Pink background */
-            color: #ffffff; /* White text */
         }
 
 h1      {
             text-align: center;
-            color: #fff;
+            color: white;
             background-color: #D81B60; /* Bold Pink for the header */
             padding: 10px;
             border-radius: 8px;
@@ -25,7 +24,7 @@ h1      {
             background-color: #ffffff; /* White background for the container */
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
 select, input[type="number"] 
@@ -42,7 +41,7 @@ select, input[type="number"]
 button  {
             width: 100%;
             padding: 10px;
-            background-color: #D81B60; /* Darker pink on hover */
+            background-color: #D81B60; /* Soft pink button */
             color: white;
             border: none;
             border-radius: 4px;
@@ -51,7 +50,7 @@ button  {
 
 button:hover 
         {
-            background-color: #F06292; /* Soft Pink button */
+            background-color: #F06292; /* Darker pink on hover */
         }
 
 #result {
@@ -74,7 +73,7 @@ button:hover
 
 #savedConversions li 
         {
-            background-color: #333333; /* Dark gray for saved conversions */
+            background-color: #f1f1f1;
             margin-bottom: 5px;
             padding: 10px;
             border-radius: 4px;

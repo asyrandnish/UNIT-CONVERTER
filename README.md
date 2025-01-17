@@ -1,115 +1,219 @@
-#include <iostream>
-#include <vector>
-#include <string>
-
-using namespace std;
-
-// Function to convert lengths between units (m, km, cm, mm)
-double convertLength(double value, string from, string to) {
-    // Length conversions
-    if (from == "m" && to == "km") return value / 1000;
-    if (from == "m" && to == "cm") return value * 100;
-    if (from == "m" && to == "mm") return value * 1000;
-    if (from == "km" && to == "m") return value * 1000;
-    if (from == "cm" && to == "m") return value / 100;
-    if (from == "mm" && to == "m") return value / 1000;
-    // Add more conversions as needed
-    return value; // Return the original value if no conversion match
-}
-
-// Function to convert mass between units (kg, g, mg)
-double convertMass(double value, string from, string to) {
-    // Mass conversions
-    if (from == "kg" && to == "g") return value * 1000;
-    if (from == "g" && to == "kg") return value / 1000;
-    if (from == "kg" && to == "mg") return value * 1000000;
-    if (from == "mg" && to == "kg") return value / 1000000;
-    // Add more conversions as needed
-    return value; // Return the original value if no conversion match
-}
-
-// Function to convert temperatures between units (Celsius, Fahrenheit, Kelvin)
-double convertTemperature(double value, string from, string to) {
-    // Temperature conversions
-    if (from == "Celsius" && to == "Fahrenheit") return (value * 9 / 5) + 32;
-    if (from == "Celsius" && to == "Kelvin") return value + 273.15;
-    if (from == "Fahrenheit" && to == "Celsius") return (value - 32) * 5 / 9;
-    if (from == "Fahrenheit" && to == "Kelvin") return (value - 32) * 5 / 9 + 273.15;
-    if (from == "Kelvin" && to == "Celsius") return value - 273.15;
-    if (from == "Kelvin" && to == "Fahrenheit") return (value - 273.15) * 9 / 5 + 32;
-    // Add more conversions as needed
-    return value; // Return the original value if no conversion match
-}
-
-// Main function for running the conversion program
-int main() {
-    vector<string> savedConversions; // List to store saved conversions
-    int choice;
-    
-   do {
-        // Displaying the menu options
-        cout << "\nUnit Conversion Program" << endl;
-        cout << "1. Length Conversion" << endl;
-        cout << "2. Mass Conversion" << endl;
-        cout << "3. Temperature Conversion" << endl;
-        cout << "4. Show Saved Conversions" << endl;
-        cout << "5. Exit" << endl;
-        cout << "Enter your choice: ";
-        cin >> choice;
-        
-  double value;
-  string fromUnit, toUnit;
-        
-  // Switch case to handle different types of conversions
-        switch (choice) {
-            case 1: // Length Conversion
-                cout << "Enter the length value: ";
-                cin >> value;
-                cout << "Enter unit to convert from (m, km, cm, mm): ";
-                cin >> fromUnit;
-                cout << "Enter unit to convert to (m, km, cm, mm): ";
-                cin >> toUnit;
-                cout << "Converted value: " << convertLength(value, fromUnit, toUnit) << endl;
-                savedConversions.push_back(fromUnit + " to " + toUnit); // Save conversion
-                break;
-            
-  case 2: // Mass Conversion
-                cout << "Enter the mass value: ";
-                cin >> value;
-                cout << "Enter unit to convert from (kg, g, mg): ";
-                cin >> fromUnit;
-                cout << "Enter unit to convert to (kg, g, mg): ";
-                cin >> toUnit;
-                cout << "Converted value: " << convertMass(value, fromUnit, toUnit) << endl;
-                savedConversions.push_back(fromUnit + " to " + toUnit); // Save conversion
-                break;
-                
-  case 3: // Temperature Conversion
-                cout << "Enter the temperature value: ";
-                cin >> value;
-                cout << "Enter unit to convert from (Celsius, Fahrenheit, Kelvin): ";
-                cin >> fromUnit;
-                cout << "Enter unit to convert to (Celsius, Fahrenheit, Kelvin): ";
-                cin >> toUnit;
-                cout << "Converted value: " << convertTemperature(value, fromUnit, toUnit) << endl;
-                savedConversions.push_back(fromUnit + " to " + toUnit); // Save conversion
-                break;
-                
-  case 4: // Show Saved Conversions
-                cout << "Saved conversions: " << endl;
-                for (const string& conversion : savedConversions) {
-                    cout << conversion << endl;
-                }
-                break;
-                
-  case 5: // Exit the program
-                cout << "Exiting program." << endl;
-                break;
-                
-  default:
-                cout << "Invalid choice. Please try again." << endl;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Conversion Program</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
         }
-    } while (choice != 5); // Loop until the user chooses to exit
-    
-  return 0;
-}
+
+h1 {
+            text-align: center;
+            color: #333;
+        }
+
+.container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+select, input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+ button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+ button:hover {
+            background-color: #45a049;
+        }
+
+  #result {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+ #savedConversions {
+            margin-top: 20px;
+        }
+
+ #savedConversions ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+  #savedConversions li {
+          background-color: #f1f1f1;
+            margin-bottom: 5px;
+            padding: 10px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+  <h1>Unit Conversion Program</h1>
+
+   <div class="container">
+        <h2>Conversion</h2>
+
+   <label for="conversionType">Choose conversion type:</label>
+        <select id="conversionType">
+            <option value="length">Length</option>
+            <option value="mass">Mass</option>
+            <option value="temperature">Temperature</option>
+        </select>
+
+  <label for="value">Enter value:</label>
+        <input type="number" id="value" placeholder="Enter value to convert" />
+    <label for="fromUnit">From unit:</label>
+        <select id="fromUnit"></select>
+        
+<label for="toUnit">To unit:</label>
+        <select id="toUnit"></select>
+
+<button onclick="performConversion()">Convert</button>
+
+<div id="result"></div>
+
+<div id="savedConversions">
+            <h3>Saved Conversions:</h3>
+            <ul id="conversionList"></ul>
+        </div>
+    </div>
+
+<script>
+        const lengthUnits = ['m', 'km', 'cm', 'mm'];
+        const massUnits = ['kg', 'g', 'mg'];
+        const temperatureUnits = ['Celsius', 'Fahrenheit', 'Kelvin'];
+
+        let savedConversions = [];
+// Populate unit options based on conversion type
+        document.getElementById('conversionType').addEventListener('change', updateUnitOptions);
+        updateUnitOptions(); // Initial population
+
+        function updateUnitOptions() {
+            const type = document.getElementById('conversionType').value;
+            let units = [];
+
+            if (type === 'length') {
+                units = lengthUnits;
+            } else if (type === 'mass') {
+                units = massUnits;
+            } else if (type === 'temperature') {
+                units = temperatureUnits;
+            }
+
+            populateSelectOptions('fromUnit', units);
+            populateSelectOptions('toUnit', units);
+        }
+
+        // Function to populate select options
+        function populateSelectOptions(id, units) {
+            const select = document.getElementById(id);
+            select.innerHTML = ''; // Clear existing options
+            units.forEach(unit => {
+                const option = document.createElement('option');
+                option.value = unit;
+                option.textContent = unit;
+                select.appendChild(option);
+            });
+        }
+
+// Perform the conversion based on user input
+        function performConversion() {
+            const value = parseFloat(document.getElementById('value').value);
+            const fromUnit = document.getElementById('fromUnit').value;
+            const toUnit = document.getElementById('toUnit').value;
+            const type = document.getElementById('conversionType').value;
+
+            let result;
+
+            if (isNaN(value)) {
+                alert("Please enter a valid number.");
+                return;
+            }
+
+            if (type === 'length') {
+                result = convertLength(value, fromUnit, toUnit);
+            } else if (type === 'mass') {
+                result = convertMass(value, fromUnit, toUnit);
+            } else if (type === 'temperature') {
+                result = convertTemperature(value, fromUnit, toUnit);
+            }
+
+            // Show result
+            document.getElementById('result').textContent = `Converted value: ${result}`;
+
+            // Save conversion
+            savedConversions.push(`${value} ${fromUnit} to ${toUnit}: ${result}`);
+            updateSavedConversions();
+        }
+
+        // Conversion functions
+        function convertLength(value, from, to) {
+            if (from === 'm' && to === 'km') return value / 1000;
+            if (from === 'm' && to === 'cm') return value * 100;
+            if (from === 'm' && to === 'mm') return value * 1000;
+            if (from === 'km' && to === 'm') return value * 1000;
+            if (from === 'cm' && to === 'm') return value / 100;
+            if (from === 'mm' && to === 'm') return value / 1000;
+            return value;
+        }
+
+        function convertMass(value, from, to) {
+            if (from === 'kg' && to === 'g') return value * 1000;
+            if (from === 'g' && to === 'kg') return value / 1000;
+            if (from === 'kg' && to === 'mg') return value * 1000000;
+            if (from === 'mg' && to === 'kg') return value / 1000000;
+            return value;
+        }
+
+        function convertTemperature(value, from, to) {
+            if (from === 'Celsius' && to === 'Fahrenheit') return (value * 9 / 5) + 32;
+            if (from === 'Celsius' && to === 'Kelvin') return value + 273.15;
+            if (from === 'Fahrenheit' && to === 'Celsius') return (value - 32) * 5 / 9;
+            if (from === 'Fahrenheit' && to === 'Kelvin') return (value - 32) * 5 / 9 + 273.15;
+            if (from === 'Kelvin' && to === 'Celsius') return value - 273.15;
+            if (from === 'Kelvin' && to === 'Fahrenheit') return (value - 273.15) * 9 / 5 + 32;
+            return value;
+        }
+
+        // Update the list of saved conversions
+        function updateSavedConversions() {
+            const list = document.getElementById('conversionList');
+            list.innerHTML = ''; // Clear the list
+
+            savedConversions.forEach(conversion => {
+                const li = document.createElement('li');
+                li.textContent = conversion;
+                list.appendChild(li);
+            });
+        }
+    </script>
+
+</body>
+</html>
+
+
+ 

@@ -22,7 +22,7 @@ h1      {
 .container {
             max-width: 600px;
             margin: 0 auto;
-            background-color: #2c3e50; /* Darker gray-blue background for the container */
+            background-color: #444444; /* Slightly lighter gray for the container */
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);

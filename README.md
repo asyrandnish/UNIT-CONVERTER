@@ -7,14 +7,14 @@
 body    {
             font-family: Arial, sans-serif;
             margin: 20px;
-            background-color: #1a1a1a; /* Dark gray background */
+            background-color: #F8BBD0; /* Soft Pink background */
             color: #ffffff; /* White text */
         }
 
 h1      {
             text-align: center;
             color: #fff;
-            background-color: #2c3e50; /* Darker blue-gray shade */
+            background-color: #D81B60; /* Bold Pink for the header */
             padding: 10px;
             border-radius: 8px;
         }
@@ -22,7 +22,7 @@ h1      {
 .container {
             max-width: 600px;
             margin: 0 auto;
-            background-color: #444444; /* Slightly lighter gray for the container */
+            background-color: #ffffff; /* White background for the container */
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
@@ -34,15 +34,15 @@ select, input[type="number"]
             padding: 10px;
             margin: 10px 0;
             border-radius: 4px;
-            border: 1px solid #555; /* Dark gray border for inputs */
-            background-color: #333; /* Darker background for inputs */
-            color: #fff; /* White text in input fields */
+            border: 1px solid #F06292; /* Soft Pink border */
+            background-color: #f9f9f9; /* Light gray background */
+            color: #333; /* Darker text for readability */
         }
 
 button  {
             width: 100%;
             padding: 10px;
-            background-color: #34495e; /* Darker blue-gray for the button */
+            background-color: #F06292; /* Soft Pink button */
             color: white;
             border: none;
             border-radius: 4px;
@@ -51,14 +51,14 @@ button  {
 
 button:hover 
         {
-            background-color: #2c3e50; /* Darker blue-gray on hover */
+            background-color: #D81B60; /* Darker pink on hover */
         }
 
 #result {
             text-align: center;
             margin-top: 20px;
             font-size: 1.2em;
-            color: #ffffff; /* White result text */
+            color: #333; /* Darker text color for the result */
         }
 
 #savedConversions 
@@ -74,7 +74,7 @@ button:hover
 
 #savedConversions li 
         {
-            background-color: #333333; /* Darker gray for saved conversions */
+            background-color: #f1f1f1; /* Light gray background for saved conversions */
             margin-bottom: 5px;
             padding: 10px;
             border-radius: 4px;

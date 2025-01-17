@@ -7,14 +7,14 @@
 body    {
             font-family: Arial, sans-serif;
             margin: 20px;
-            background-color: #333333; /* Dark gray background */
+            background-color: #1a1a1a; /* Dark gray background */
             color: #ffffff; /* White text */
         }
 
 h1      {
             text-align: center;
             color: #fff;
-            background-color: #4f7bb0; /* Softer but richer blue shade */
+            background-color: #2c3e50; /* Darker blue-gray shade */
             padding: 10px;
             border-radius: 8px;
         }
@@ -22,10 +22,10 @@ h1      {
 .container {
             max-width: 600px;
             margin: 0 auto;
-            background-color: #444444; /* Slightly lighter gray for the container */
+            background-color: #2c3e50; /* Darker gray-blue background for the container */
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
         }
 
 select, input[type="number"] 
@@ -34,15 +34,15 @@ select, input[type="number"]
             padding: 10px;
             margin: 10px 0;
             border-radius: 4px;
-            border: 1px solid #777; /* Medium gray border for inputs */
-            background-color: #555555; /* Darker background for inputs */
+            border: 1px solid #555; /* Dark gray border for inputs */
+            background-color: #333; /* Darker background for inputs */
             color: #fff; /* White text in input fields */
         }
 
 button  {
             width: 100%;
             padding: 10px;
-            background-color: #5d8fbb; /* Richer blue for button */
+            background-color: #34495e; /* Darker blue-gray for the button */
             color: white;
             border: none;
             border-radius: 4px;
@@ -51,7 +51,7 @@ button  {
 
 button:hover 
         {
-            background-color: #4f7bb0; /* Darker blue on hover */
+            background-color: #2c3e50; /* Darker blue-gray on hover */
         }
 
 #result {
@@ -74,7 +74,7 @@ button:hover
 
 #savedConversions li 
         {
-            background-color: #555555; /* Darker gray for saved conversions */
+            background-color: #333333; /* Darker gray for saved conversions */
             margin-bottom: 5px;
             padding: 10px;
             border-radius: 4px;

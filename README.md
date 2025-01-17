@@ -4,30 +4,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unit Conversion Program</title>
     <style>
-        body 
-        {
+        body {
             font-family: Arial, sans-serif;
             margin: 20px;
-            background-color: #f4f4f9;
+            background-color: #f0f8ff; /* Soft light blue */
         }
 
 h1      {
             text-align: center;
-            color: white;
-            background-color: blue;
+            color: #fff;
+            background-color: #5a9bd4; /* Softer blue shade */
             padding: 10px;
             border-radius: 8px;
         }
 
-.container 
-        {
+.container {
             max-width: 600px;
             margin: 0 auto;
-            background-color: white;
+            background-color: #ffffff; /* White background for the container */
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
+           }
 
 select, input[type="number"] 
         {
@@ -35,29 +33,28 @@ select, input[type="number"]
             padding: 10px;
             margin: 10px 0;
             border-radius: 4px;
-            border: 1px solid #ccc;
+            border: 1px solid #ddd; /* Lighter border color */
         }
 
 button {
             width: 100%;
             padding: 10px;
-            background-color: blue;
+            background-color: #6fa3d4; /* Soft blue */
             color: white;
             border: none;
             border-radius: 4px;
             cursor: pointer;
         }
 
-button:hover 
-        {
-            background-color: #0056b3;
-        }
+button:hover {
+               background-color: #5a8bb7; /* Slightly darker blue */
+             }
 
 #result {
             text-align: center;
             margin-top: 20px;
             font-size: 1.2em;
-            color: #333;
+            color: #333; /* Dark text for contrast */
         }
 
 #savedConversions 
@@ -73,7 +70,7 @@ button:hover
 
 #savedConversions li 
         {
-            background-color: #f1f1f1;
+            background-color: #f9f9f9; /* Soft light gray for saved conversions */
             margin-bottom: 5px;
             padding: 10px;
             border-radius: 4px;

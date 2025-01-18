@@ -7,13 +7,13 @@
 body    {
             font-family: Arial, sans-serif;
             margin: 20px;
-            background-color: #F8BBD0; /* Soft Pink background */
+            background-color: #87CEEB; /* Sky blue background */
         }
 
 h1      {
             text-align: center;
             color: white;
-            background-color: #D81B60; /* Bold Pink for the header */
+            background-color: #0077BE; /* Ocean blue for the header */
             padding: 10px;
             border-radius: 8px;
         }
@@ -24,7 +24,7 @@ h1      {
             background-color: #ffffff; /* White background for the container */
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
         }
 
 select, input[type="number"] 
@@ -33,7 +33,7 @@ select, input[type="number"]
             padding: 10px;
             margin: 10px 0;
             border-radius: 4px;
-            border: 1px solid #F06292; /* Soft Pink border */
+            border: 1px solid #0077BE; /* Ocean blue border */
             background-color: #f9f9f9; /* Light gray background */
             color: #333; /* Darker text for readability */
         }
@@ -41,7 +41,7 @@ select, input[type="number"]
 button  {
             width: 100%;
             padding: 10px;
-            background-color: #D81B60; /* Soft pink button */
+            background-color: #5D9CEC; /* Light ocean blue button */
             color: white;
             border: none;
             border-radius: 4px;
@@ -50,7 +50,7 @@ button  {
 
 button:hover 
         {
-            background-color: #F06292; /* Darker pink on hover */
+            background-color: #0077BE; /* Ocean blue on hover */
         }
 
 #result {

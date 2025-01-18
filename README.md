@@ -16,6 +16,8 @@ h1      {
             background-color: #0077BE; /* Ocean blue for the header */
             padding: 10px;
             border-radius: 8px;
+            max-width: 600px; /* Match container's width */
+            margin: 0 auto; /* Center the header */
         }
 
 .container {

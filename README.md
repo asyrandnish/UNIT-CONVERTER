@@ -41,7 +41,7 @@ select, input[type="number"]
 button  {
             width: 100%;
             padding: 10px;
-            background-color: #5D9CEC; /* Light ocean blue button */
+            background-color: #0077BE; /* Ocean blue on hover */
             color: white;
             border: none;
             border-radius: 4px;
@@ -50,9 +50,12 @@ button  {
 
 button:hover 
         {
-            background-color: #0077BE; /* Ocean blue on hover */
+            background-color: #5D9CEC; /* Light ocean blue button */
         }
-
+#unitConverterHeader 
+        {
+            color: white; /* Change text color to white */
+        }
 #result {
             text-align: center;
             margin-top: 20px;

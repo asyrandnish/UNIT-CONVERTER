@@ -14,9 +14,9 @@ h1      {
             text-align: center;
             color: white;
             background-color: #0077BE; /* Ocean blue for the header */
-            padding: 10px;
+            padding: 20px;
             border-radius: 8px;
-            max-width: 600px; /* Match container's width */
+            max-width: 800px; /* Match container's width */
             margin: 0 auto; /* Center the header */
         }
 

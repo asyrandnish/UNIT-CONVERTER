@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ENGINEERING UNIT CONVERTER</title>
+    <title>UNIT CONVERTER</title>
     <style>
 body    {
             font-family: Arial, sans-serif;
@@ -87,12 +87,12 @@ button:hover
 </head>
 <body>
 
-<h1>ENGINEERING UNIT CONVERTER</h1>
+<h1>UNIT CONVERTER</h1>
 
 <div class="container">
-<h2>Conversion</h2>
+<h2>Convert units</h2>
 
-<label for="conversionType">Choose conversion type:</label>
+<label for="conversionType">Conversion type:</label>
         <select id="conversionType">
             <option value="length">Length</option>
             <option value="mass">Mass</option>
